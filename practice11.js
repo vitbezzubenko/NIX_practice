@@ -147,9 +147,25 @@ function cruso(income, palm, expense) {
      return console.log(`Необхідний проміжок часу ${Math.ceil(period)} місяці(в).`);
 }
 
-// Завдання №17. Запитання користувачеві    
+// Завдання №17. Запитання користувачеві. Сумма негативних чисел в масиві    
 
-
+negativeSumResult();
+function negativeSumResult() {
+    let arr = [];
+    while (true) {
+      let value = prompt("Введіть число", 0);
+      if (value === "" || value === null || !isFinite(value)) break;
+      arr.push(+value);
+      }
+      let sum = 0;
+       for (let i = 0; i < arr.length; i++) {
+          if(arr[i] < 0) {
+            sum += arr[i];
+          }
+       }
+       console.log(arr);    
+       alert(`Cумa негативних ${sum}`);
+}
 
 
 
